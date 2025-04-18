@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Guess The Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Guess The Number</h1>
+    <p class="subtitle">I'm thinking of a number between <strong>1 and 100</strong></p>
+
+    <div class="game-box">
+      <input type="number" id="guessInput" placeholder="Enter your guess" />
+      <button id="guessBtn">Guess</button>
+      <p class="message" id="message">Start guessing!</p>
+      <p class="hint" id="hint"></p>
+      <p class="attempts">Attempts: <span id="attemptCount">0</span></p>
+      <button id="resetBtn">Play Again 🔁</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Pawan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

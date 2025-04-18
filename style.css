@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease;
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .game-box input {
+    padding: 0.7rem;
+    width: 80%;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .game-box input:focus {
+    outline: none;
+    transform: scale(1.05);
+  }
+  
+  button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0.5rem;
+  }
+  
+  button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+  }
+  
+  .message {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    min-height: 24px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .message.animate {
+    animation: fadeInPop 0.6s ease-in-out;
+  }
+  
+  .hint {
+    margin-top: 0.5rem;
+    font-style: italic;
+    animation: slideUp 0.6s ease-in-out;
+  }
+  
+  .attempts {
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #eee;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInPop {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .container {
+      padding: 2rem;
+    }
+  
+    button {
+      width: 100%;
+    }
+  
+    .game-box input {
+      width: 100%;
+    }
+  }
+  
